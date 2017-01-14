@@ -19,7 +19,7 @@ An android library to display a material-designed dialog with header.
 ```
 The MIT License (MIT)
 
-Copyright (c) 2016 Marcos Calvo García
+Copyright (c) 2017 Marcos Calvo García
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

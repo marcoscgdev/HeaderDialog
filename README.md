@@ -7,7 +7,7 @@ An android library to display a material-designed dialog with header.
 
 ##Screenshots
 
-<img src="https://raw.githubusercontent.com/marcoscgdev/EasyPermissions/master/screenshots/1.jpg" width="350">
+<img src="http://i.imgur.com/ot4m3on.png" width="350">
 
 ---
 >See the *sample project* to clarify any queries you may have.

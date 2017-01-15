@@ -7,10 +7,16 @@ An android library to display a material-designed dialog with header.
 new HeaderDialog(this)
                 .setColor(getResources().getColor(R.color.colorAccent))
                 .setIcon(getResources().getDrawable(R.drawable.ic_info_outline_black_48dp))
-                .setTitle(getResources().getString(R.string.app_name))
-                .setMessage(getResources().getString(R.string.lorem))
+                .setTitle(getResources().getString(R.string.library_name))
+                .setMessage(Html.fromHtml(msg))
+                .justifyContent(false) // default false
                 .setTitleColor(Color.parseColor("#212121"))
-                .setPositiveButton(android.R.string.ok, null)
+                .setPositiveButton("Close", null)
+                .setNeutralButton("View on GitHub", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/marcoscgdev/EasyLicensesDialog")));
+                    }
+                })
                 .show();
 ```
 

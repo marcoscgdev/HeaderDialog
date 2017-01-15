@@ -38,10 +38,10 @@ allprojects {
 Now add the dependency to your app build.gradle file:
 
 ```
-
-compile 'com.github.marcoscgdev:HeaderDialog:X.X.X' //X.X.X means the current version number
-
+compile 'com.github.marcoscgdev:HeaderDialog:1.0.1'
 ```
+
+Here is a complete snippet of the usage:
 
 ```
 new HeaderDialog(this)

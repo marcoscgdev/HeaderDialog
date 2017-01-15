@@ -3,14 +3,16 @@ An android library to display a material-designed dialog with header.
 
 ***Coming soon...***
 
-```new HeaderDialog(this)
+```
+new HeaderDialog(this)
                 .setColor(getResources().getColor(R.color.colorAccent))
                 .setIcon(getResources().getDrawable(R.drawable.ic_info_outline_black_48dp))
                 .setTitle(getResources().getString(R.string.app_name))
                 .setMessage(getResources().getString(R.string.lorem))
                 .setTitleColor(Color.parseColor("#212121"))
                 .setPositiveButton(android.R.string.ok, null)
-                .show();```
+                .show();
+```
 
 ---
 

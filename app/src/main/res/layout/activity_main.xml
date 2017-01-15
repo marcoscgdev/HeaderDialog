@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorPrimary"
+    tools:context="com.marcoscg.headerdialogsample.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?borderlessButtonStyle"
+        android:textColor="@android:color/white"
+        android:text="Show headerdialog"
+        android:textSize="16sp"
+        android:layout_centerInParent="true"
+        android:onClick="showHeaderDialog"/>
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/hideIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="#fff"
+        android:text="Hide icon"/>
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/hideTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:text="Hide title"/>
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/justify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:checked="true"
+        android:textColor="#fff"
+        android:text="Justify"/>
+
+</RelativeLayout>

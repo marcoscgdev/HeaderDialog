@@ -43,16 +43,16 @@ compile 'com.github.marcoscgdev:HeaderDialog:1.0.1'
 
 ### Creating the dialog
 
-Here is a complete snippet of the usage:
+Here is a complete snippet of it usage:
 
 ```
 new HeaderDialog(this)
-                .setColor(getResources().getColor(R.color.colorAccent))
-                .setIcon(getResources().getDrawable(R.drawable.ic_info_outline_black_48dp))
-                .setTitle(getResources().getString(R.string.library_name))
-                .setMessage(Html.fromHtml(msg))
-                .justifyContent(false) // Default false
-                .setTitleColor(Color.parseColor("#212121"))
+                .setColor(getResources().getColor(R.color.colorAccent)) // Sets the header background color
+                .setIcon(getResources().getDrawable(R.drawable.ic_info_outline_black_48dp)) // Sets the dialog icon image
+                .setTitle(getResources().getString(R.string.library_name)) // Sets the dialog title
+                .setMessage("Lorem ipsum dolor sit amet...") // Set the dialog message
+                .justifyContent(true) // Default false, justifies the message
+                .setTitleColor(Color.parseColor("#212121")) // Sets the title text color
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // Your action

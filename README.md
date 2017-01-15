@@ -9,12 +9,12 @@ new HeaderDialog(this)
                 .setIcon(getResources().getDrawable(R.drawable.ic_info_outline_black_48dp))
                 .setTitle(getResources().getString(R.string.library_name))
                 .setMessage(Html.fromHtml(msg))
-                .justifyContent(false) // default false
+                .justifyContent(false) // Default false
                 .setTitleColor(Color.parseColor("#212121"))
                 .setPositiveButton("Close", null)
-                .setNeutralButton("View on GitHub", new DialogInterface.OnClickListener() {
+                .setNeutralButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/marcoscgdev/EasyLicensesDialog")));
+                        // Your action
                     }
                 })
                 .show();

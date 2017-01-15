@@ -11,25 +11,6 @@ You can see all the library releases [here](https://github.com/marcoscgdev/Heade
 
 ---
 
-```
-new HeaderDialog(this)
-                .setColor(getResources().getColor(R.color.colorAccent))
-                .setIcon(getResources().getDrawable(R.drawable.ic_info_outline_black_48dp))
-                .setTitle(getResources().getString(R.string.library_name))
-                .setMessage(Html.fromHtml(msg))
-                .justifyContent(false) // Default false
-                .setTitleColor(Color.parseColor("#212121"))
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Your action
-                    }
-                })
-                .setNegativeButton("Close", null)
-                .show();
-```
-
----
-
 ##Screenshots
 
 <img src="https://raw.githubusercontent.com/marcoscgdev/HeaderDialog/master/screenshots/1.jpg" width="350">
@@ -52,6 +33,31 @@ allprojects {
 			maven { url 'https://jitpack.io' }
 		}
 	}
+```
+
+Now add the dependency to your app build.gradle file:
+
+```
+
+compile 'com.github.marcoscgdev:HeaderDialog:X.X.X' //X.X.X means the current version number
+
+```
+
+```
+new HeaderDialog(this)
+                .setColor(getResources().getColor(R.color.colorAccent))
+                .setIcon(getResources().getDrawable(R.drawable.ic_info_outline_black_48dp))
+                .setTitle(getResources().getString(R.string.library_name))
+                .setMessage(Html.fromHtml(msg))
+                .justifyContent(false) // Default false
+                .setTitleColor(Color.parseColor("#212121"))
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Your action
+                    }
+                })
+                .setNegativeButton("Close", null)
+                .show();
 ```
 
 ---

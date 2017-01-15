@@ -62,6 +62,8 @@ new HeaderDialog(this)
                 .show();
 ```
 
+#### Important note: Do not enable the justified text if you are using html content!
+
 ---
 >See the *sample project* to clarify any queries you may have.
 

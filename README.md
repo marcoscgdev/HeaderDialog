@@ -1,7 +1,15 @@
 # HeaderDialog
 An android library to display a material-designed dialog with header.
 
-***Coming soon...***
+---
+
+## Releases:
+
+#### Current release: 1.0.1.
+
+You can see all the library releases [here](https://github.com/marcoscgdev/HeaderDialog/releases).
+
+---
 
 ```
 new HeaderDialog(this)
@@ -28,6 +36,23 @@ new HeaderDialog(this)
 <img src="https://raw.githubusercontent.com/marcoscgdev/HeaderDialog/master/screenshots/2.jpg" width="350">
 
 <a href='#'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height='90'/></a>
+
+---
+
+## Usage:
+
+#### Adding the depencency
+
+Add this to your root *build.gradle* file:
+
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
 
 ---
 >See the *sample project* to clarify any queries you may have.

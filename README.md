@@ -22,7 +22,7 @@ You can see all the library releases [here](https://github.com/marcoscgdev/Heade
 
 ## Usage:
 
-#### Adding the depencency
+### Adding the depencency
 
 Add this to your root *build.gradle* file:
 
@@ -40,6 +40,8 @@ Now add the dependency to your app build.gradle file:
 ```
 compile 'com.github.marcoscgdev:HeaderDialog:1.0.1'
 ```
+
+### Creating the dialog
 
 Here is a complete snippet of the usage:
 

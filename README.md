@@ -11,12 +11,12 @@ new HeaderDialog(this)
                 .setMessage(Html.fromHtml(msg))
                 .justifyContent(false) // Default false
                 .setTitleColor(Color.parseColor("#212121"))
-                .setPositiveButton("Close", null)
-                .setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // Your action
                     }
                 })
+                .setNegativeButton("Close", null)
                 .show();
 ```
 

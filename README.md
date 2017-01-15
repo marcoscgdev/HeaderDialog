@@ -50,7 +50,7 @@ new HeaderDialog(this)
                 .setColor(getResources().getColor(R.color.colorAccent)) // Sets the header background color
                 .setIcon(getResources().getDrawable(R.drawable.ic_info_outline_black_48dp)) // Sets the dialog icon image
                 .setTitle(getResources().getString(R.string.library_name)) // Sets the dialog title
-                .setMessage("Lorem ipsum dolor sit amet...") // Set the dialog message
+                .setMessage("Lorem ipsum dolor sit amet...") // Sets the dialog message
                 .justifyContent(true) // Default false, justifies the message
                 .setTitleColor(Color.parseColor("#212121")) // Sets the title text color
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {

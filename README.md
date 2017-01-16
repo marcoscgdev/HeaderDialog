@@ -1,4 +1,4 @@
-# HeaderDialog  [![API](https://img.shields.io/badge/API-9%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=9)
+# HeaderDialog  [![API](https://img.shields.io/badge/API-9%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=9) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-HeaderDialog-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5076)
 An android library to display a material-designed dialog with header.
 
 ---

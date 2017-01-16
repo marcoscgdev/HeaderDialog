@@ -20,6 +20,15 @@ You can see all the library releases [here](https://github.com/marcoscgdev/Heade
 
 ---
 
+## Features
+
+- Roboto font
+- Justify text option
+- Icon, text and both in header
+- Show or hide shadow (TODO)
+
+---
+
 ## Usage:
 
 ### Adding the depencency

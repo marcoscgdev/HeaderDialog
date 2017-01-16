@@ -23,7 +23,7 @@ You can see all the library releases [here](https://github.com/marcoscgdev/Heade
 ## Features
 
 - Roboto font
-- HTML with LinkMovementMethod support
+- LinkMovementMethod support
 - Justify text option
 - Icon, text and both as header
 - Custom header background color

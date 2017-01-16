@@ -24,7 +24,9 @@ You can see all the library releases [here](https://github.com/marcoscgdev/Heade
 
 - Roboto font
 - Justify text option
-- Icon, text and both in header
+- Icon, text and both as header
+- Custom header background color
+- Custom header text color
 - Show or hide shadow (TODO)
 
 ---

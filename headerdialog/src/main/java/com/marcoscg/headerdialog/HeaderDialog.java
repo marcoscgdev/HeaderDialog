@@ -26,7 +26,7 @@ public class HeaderDialog extends AlertDialog.Builder {
     ImageView iv;
     LinearLayout ly;
     View shadow;
-    boolean justifyText = false;
+    boolean setElevation = true;
 
     public HeaderDialog(Context context) {
         super(context);
@@ -43,7 +43,7 @@ public class HeaderDialog extends AlertDialog.Builder {
         tv.setVisibility(View.VISIBLE);
         if (ly.getVisibility() == View.GONE)
             ly.setVisibility(View.VISIBLE);
-        if (shadow.getVisibility() == View.GONE)
+        if (shadow.getVisibility() == View.GONE && setElevation)
             shadow.setVisibility(View.VISIBLE);
         if (iv.getVisibility() == View.VISIBLE)
             tv.setPadding(0,dpToPx(8),0,0);
@@ -66,12 +66,17 @@ public class HeaderDialog extends AlertDialog.Builder {
         return this;
     }
 
+    public HeaderDialog setTitleGravity(int gravity) {
+        tv.setGravity(gravity);
+        return this;
+    }
+
     public HeaderDialog setIcon (int icon) {
         iv.setImageResource(icon);
         iv.setVisibility(View.VISIBLE);
         if (ly.getVisibility() == View.GONE)
             ly.setVisibility(View.VISIBLE);
-        if (shadow.getVisibility() == View.GONE)
+        if (shadow.getVisibility() == View.GONE && setElevation)
             shadow.setVisibility(View.VISIBLE);
         return this;
     }
@@ -80,7 +85,7 @@ public class HeaderDialog extends AlertDialog.Builder {
         iv.setVisibility(View.VISIBLE);
         if (ly.getVisibility() == View.GONE)
             ly.setVisibility(View.VISIBLE);
-        if (shadow.getVisibility() == View.GONE)
+        if (shadow.getVisibility() == View.GONE && setElevation)
             shadow.setVisibility(View.VISIBLE);
         return this;
     }
@@ -98,6 +103,11 @@ public class HeaderDialog extends AlertDialog.Builder {
             if (ctvj.getVisibility() == View.VISIBLE)
                 ctvj.setVisibility(View.GONE);
         }
+        return this;
+    }
+
+    public HeaderDialog setElevation(boolean elevation) {
+        setElevation = elevation;
         return this;
     }
 

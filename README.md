@@ -28,8 +28,8 @@ You can see all the library releases [here](https://github.com/marcoscgdev/Heade
 - Icon, text and both as header
 - Custom header background color
 - Custom header text color
-- Custom header text gravity
-- Show or hide header shadow
+- Custom header text gravity (NEW)
+- Show or hide header shadow (NEW)
 
 ---
 

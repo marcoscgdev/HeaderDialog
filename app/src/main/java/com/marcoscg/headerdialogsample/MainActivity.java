@@ -8,6 +8,7 @@ import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         if (justify.isChecked())
             headerDialog.justifyContent(true);
         headerDialog.setTitleColor(Color.parseColor("#212121"));
+        headerDialog.setTitleGravity(Gravity.CENTER_HORIZONTAL);
         headerDialog.setPositiveButton(android.R.string.ok, null);
         headerDialog.show();
     }
@@ -79,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 .setMessage(Html.fromHtml(msg))
                 .justifyContent(false) // Default false
                 .setTitleColor(getResources().getColor(R.color.colorPrimary))
+                .setTitleGravity(Gravity.CENTER_HORIZONTAL)
                 .setPositiveButton("Close", null)
                 .setNeutralButton("View on GitHub", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {

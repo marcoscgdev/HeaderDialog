@@ -5,7 +5,7 @@ An android library to display a material-designed dialog with header.
 
 ## Releases:
 
-#### Current release: 1.0.1.
+#### Current release: 1.0.2.
 
 You can see all the library releases [here](https://github.com/marcoscgdev/HeaderDialog/releases).
 
@@ -28,7 +28,8 @@ You can see all the library releases [here](https://github.com/marcoscgdev/Heade
 - Icon, text and both as header
 - Custom header background color
 - Custom header text color
-- Show or hide header shadow (TODO, now is always visible)
+- Custom header text gravity
+- Show or hide header shadow
 
 ---
 

@@ -5,7 +5,7 @@ An android library to display a material-designed dialog with header.
 
 ## Releases:
 
-#### Current release: 1.0.2.
+#### Current release: 1.0.3.
 
 You can see all the library releases [here](https://github.com/marcoscgdev/HeaderDialog/releases).
 
@@ -28,8 +28,12 @@ You can see all the library releases [here](https://github.com/marcoscgdev/Heade
 - Icon, text and both as header
 - Custom header background color
 - Custom header text color
+- Custom header icon color (NEW)
 - Custom header text gravity (NEW)
+- Custom message text gravity (NEW)
 - Show or hide header shadow (NEW)
+- Multiline text option (NEW)
+- Arabic text support (NEW)
 
 ---
 
@@ -51,7 +55,7 @@ allprojects {
 Now add the dependency to your app build.gradle file:
 
 ```
-compile 'com.github.marcoscgdev:HeaderDialog:1.0.2'
+compile 'com.github.marcoscgdev:HeaderDialog:1.0.3'
 ```
 
 ### Creating the dialog
@@ -67,7 +71,10 @@ new HeaderDialog(this)
                 .setMessage("Lorem ipsum dolor sit amet...") // Sets the dialog message
                 .justifyContent(true) // Justifies the message text, false by default
                 .setTitleColor(Color.parseColor("#212121")) // Sets the title text color
+		.setIconColor(Color.parseColor("#212121")) // Sets the icon color
                 .setTitleGravity(Gravity.CENTER_HORIZONTAL) // Sets the title text gravity
+		.setMessageGravity(Gravity.CENTER_HORIZONTAL); // Sets the message text gravity
+		.setTitleMultiline(false) // Multiline title text option
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // Your action

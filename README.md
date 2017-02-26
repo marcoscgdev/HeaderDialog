@@ -32,7 +32,7 @@ You can see all the library releases [here](https://github.com/marcoscgdev/Heade
 - Custom header text gravity (NEW)
 - Custom message text gravity (NEW)
 - Show or hide header shadow (NEW)
-- Multiline title text option (NEW)
+- Multiline header title text option (NEW)
 - Arabic text support (NEW)
 
 ---
@@ -70,11 +70,11 @@ new HeaderDialog(this)
                 .setTitle(getResources().getString(R.string.library_name)) // Sets the dialog title
                 .setMessage("Lorem ipsum dolor sit amet...") // Sets the dialog message
                 .justifyContent(true) // Justifies the message text, false by default
-                .setTitleColor(Color.parseColor("#212121")) // Sets the title text color
-                .setIconColor(Color.parseColor("#212121")) // Sets the icon color
-                .setTitleGravity(Gravity.CENTER_HORIZONTAL) // Sets the title text gravity
+                .setTitleColor(Color.parseColor("#212121")) // Sets the header title text color
+                .setIconColor(Color.parseColor("#212121")) // Sets the header icon color
+                .setTitleGravity(Gravity.CENTER_HORIZONTAL) // Sets the header title text gravity
                 .setMessageGravity(Gravity.CENTER_HORIZONTAL); // Sets the message text gravity
-                .setTitleMultiline(false) // Multiline title text option
+                .setTitleMultiline(false) // Multiline header title text option
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // Your action

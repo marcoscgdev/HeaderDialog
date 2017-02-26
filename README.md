@@ -71,7 +71,7 @@ new HeaderDialog(this)
                 .setMessage("Lorem ipsum dolor sit amet...") // Sets the dialog message
                 .justifyContent(true) // Justifies the message text, false by default
                 .setTitleColor(Color.parseColor("#212121")) // Sets the title text color
-		.setIconColor(Color.parseColor("#212121")) // Sets the icon color
+                .setIconColor(Color.parseColor("#212121")) // Sets the icon color
                 .setTitleGravity(Gravity.CENTER_HORIZONTAL) // Sets the title text gravity
 		.setMessageGravity(Gravity.CENTER_HORIZONTAL); // Sets the message text gravity
 		.setTitleMultiline(false) // Multiline title text option

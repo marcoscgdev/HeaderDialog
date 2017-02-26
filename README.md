@@ -74,7 +74,7 @@ new HeaderDialog(this)
                 .setIconColor(Color.parseColor("#212121")) // Sets the header icon color
                 .setTitleGravity(Gravity.CENTER_HORIZONTAL) // Sets the header title text gravity
                 .setMessageGravity(Gravity.CENTER_HORIZONTAL); // Sets the message text gravity
-                .setTitleMultiline(false) // Multiline header title text option
+                .setTitleMultiline(false) // Multiline header title text option, true by default
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // Your action

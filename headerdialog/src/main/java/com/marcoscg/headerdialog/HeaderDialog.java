@@ -78,7 +78,7 @@ public class HeaderDialog extends AlertDialog.Builder {
     }
 
     public HeaderDialog setIconColor(int color) {
-        iv.getDrawable().setColorFilter(color, PorterDuff.Mode.SRC_IN );
+        iv.getDrawable().setColorFilter(color, PorterDuff.Mode.SRC_IN);
         return this;
     }
 

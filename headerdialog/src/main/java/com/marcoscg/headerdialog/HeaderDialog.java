@@ -144,6 +144,7 @@ public class HeaderDialog extends AlertDialog.Builder {
         ctvj = (ContentTextViewJustified) view.findViewById(R.id.content_justified);
         ctv = (ContentTextView) view.findViewById(R.id.content);
         tv = (TextView) view.findViewById(R.id.title);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL);
         ctv.setMovementMethod(LinkMovementMethod.getInstance());
         iv = (ImageView) view.findViewById(R.id.icon);
         ly = (LinearLayout) view.findViewById(R.id.layout);

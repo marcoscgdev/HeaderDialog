@@ -5,10 +5,12 @@ package com.marcoscg.headerdialog;
  */
 
 import android.content.Context;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AlertDialog;
 import android.text.method.LinkMovementMethod;
 import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,28 +20,35 @@ import android.widget.TextView;
 import com.marcoscg.headerdialog.widgets.ContentTextView;
 import com.marcoscg.headerdialog.widgets.ContentTextViewJustified;
 
+import java.util.Locale;
+
 public class HeaderDialog extends AlertDialog.Builder {
 
-    ContentTextViewJustified ctvj;
-    ContentTextView ctv;
-    TextView tv;
-    ImageView iv;
-    LinearLayout ly;
-    View shadow;
-    boolean setElevation = true;
+    private ContentTextViewJustified ctvj;
+    private ContentTextView ctv;
+    private TextView tv;
+    private ImageView iv;
+    private LinearLayout ly;
+    private View shadow;
+    private Context ctx;
+    private boolean setElevation = true;
 
     public HeaderDialog(Context context) {
         super(context);
+        ctx = context;
         setView(context);
     }
 
     public HeaderDialog(final Context context, final int theme) {
         super(context, theme);
+        ctx = context;
         setView(context);
     }
 
     public HeaderDialog setTitle(CharSequence title) {
         tv.setText(title);
+        if (Locale.getDefault().getLanguage().equals("ar"))
+            tv.setGravity(Gravity.RIGHT);
         tv.setVisibility(View.VISIBLE);
         if (ly.getVisibility() == View.GONE)
             ly.setVisibility(View.VISIBLE);
@@ -53,6 +62,8 @@ public class HeaderDialog extends AlertDialog.Builder {
     public HeaderDialog setMessage(CharSequence message) {
         ctv.setText(message);
         ctvj.setText(message);
+        if (Locale.getDefault().getLanguage().equals("ar"))
+            ctv.setGravity(Gravity.RIGHT);
         return this;
     }
 
@@ -66,8 +77,18 @@ public class HeaderDialog extends AlertDialog.Builder {
         return this;
     }
 
+    public HeaderDialog setIconColor(int color) {
+        iv.getDrawable().setColorFilter(color, PorterDuff.Mode.SRC_IN );
+        return this;
+    }
+
     public HeaderDialog setTitleGravity(int gravity) {
         tv.setGravity(gravity);
+        return this;
+    }
+
+    public HeaderDialog setMessageGravity(int gravity) {
+        ctv.setGravity(gravity);
         return this;
     }
 
@@ -80,6 +101,7 @@ public class HeaderDialog extends AlertDialog.Builder {
             shadow.setVisibility(View.VISIBLE);
         return this;
     }
+
     public HeaderDialog setIcon (Drawable icon) {
         iv.setImageDrawable(icon);
         iv.setVisibility(View.VISIBLE);
@@ -111,6 +133,12 @@ public class HeaderDialog extends AlertDialog.Builder {
         return this;
     }
 
+    public HeaderDialog setTitleMultiline(boolean multiline) {
+        if (!multiline)
+            tv.setMaxLines(1);
+        return this;
+    }
+
     private void setView(Context context) {
         View view = LayoutInflater.from(context).inflate(R.layout.header_dialog_content, null);
         ctvj = (ContentTextViewJustified) view.findViewById(R.id.content_justified);
@@ -122,8 +150,10 @@ public class HeaderDialog extends AlertDialog.Builder {
         shadow = view.findViewById(R.id.top_shadow);
         setView(view);
     }
-    public int dpToPx(int dp) {
+
+    private int dpToPx(int dp) {
         DisplayMetrics displayMetrics = getContext().getResources().getDisplayMetrics();
         return Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
     }
+
 }

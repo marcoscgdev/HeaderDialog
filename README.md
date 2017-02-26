@@ -32,7 +32,7 @@ You can see all the library releases [here](https://github.com/marcoscgdev/Heade
 - Custom header text gravity (NEW)
 - Custom message text gravity (NEW)
 - Show or hide header shadow (NEW)
-- Multiline text option (NEW)
+- Multiline title text option (NEW)
 - Arabic text support (NEW)
 
 ---

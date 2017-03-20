@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 .setIcon(getResources().getDrawable(R.mipmap.ic_launcher))
                 .setTitle(getResources().getString(R.string.library_name))
                 .setMessage(Html.fromHtml(msg))
+                .setElevation(true)
                 .justifyContent(false) // Default false
                 .setTitleColor(getResources().getColor(R.color.colorPrimary))
                 .setTitleGravity(Gravity.CENTER_HORIZONTAL)

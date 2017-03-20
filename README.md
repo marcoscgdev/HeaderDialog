@@ -45,11 +45,11 @@ Add this to your root *build.gradle* file:
 
 ```
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
 ```
 
 Now add the dependency to your app build.gradle file:
@@ -64,24 +64,24 @@ Here is a complete snippet of it usage:
 
 ```
 new HeaderDialog(this)
-                .setColor(getResources().getColor(R.color.colorAccent)) // Sets the header background color
-                .setElevation(false) // Sets the header elevation, true by default
-                .setIcon(getResources().getDrawable(R.drawable.ic_info_outline_black_48dp)) // Sets the dialog icon image
-                .setTitle(getResources().getString(R.string.library_name)) // Sets the dialog title
-                .setMessage("Lorem ipsum dolor sit amet...") // Sets the dialog message
-                .justifyContent(true) // Justifies the message text, false by default
-                .setTitleColor(Color.parseColor("#212121")) // Sets the header title text color
-                .setIconColor(Color.parseColor("#212121")) // Sets the header icon color
-                .setTitleGravity(Gravity.CENTER_HORIZONTAL) // Sets the header title text gravity
-                .setMessageGravity(Gravity.CENTER_HORIZONTAL); // Sets the message text gravity
-                .setTitleMultiline(false) // Multiline header title text option, true by default
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Your action
-                    }
-                })
-                .setNegativeButton("Close", null)
-                .show();
+    .setColor(getResources().getColor(R.color.colorAccent)) // Sets the header background color
+    .setElevation(false) // Sets the header elevation, true by default
+    .setIcon(getResources().getDrawable(R.drawable.ic_info_outline_black_48dp)) // Sets the dialog icon image
+    .setTitle(getResources().getString(R.string.library_name)) // Sets the dialog title
+    .setMessage("Lorem ipsum dolor sit amet...") // Sets the dialog message
+    .justifyContent(true) // Justifies the message text, false by default
+    .setTitleColor(Color.parseColor("#212121")) // Sets the header title text color
+    .setIconColor(Color.parseColor("#212121")) // Sets the header icon color
+    .setTitleGravity(Gravity.CENTER_HORIZONTAL) // Sets the header title text gravity
+    .setMessageGravity(Gravity.CENTER_HORIZONTAL); // Sets the message text gravity
+    .setTitleMultiline(false) // Multiline header title text option, true by default
+    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+        public void onClick(DialogInterface dialog, int which) {
+	    // Your action
+        }
+    })
+    .setNegativeButton("Close", null)
+    .show();
 ```
 
 #### Important note: Do not enable the justified text if you are using html content!

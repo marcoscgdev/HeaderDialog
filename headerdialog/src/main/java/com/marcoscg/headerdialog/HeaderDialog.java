@@ -1,7 +1,7 @@
 package com.marcoscg.headerdialog;
 
 /**
- * Created by marcos on 14/01/2017.
+ * Created by @MarcosCGdev on 14/01/2017.
  */
 
 import android.content.Context;
@@ -78,7 +78,8 @@ public class HeaderDialog extends AlertDialog.Builder {
     }
 
     public HeaderDialog setIconColor(int color) {
-        iv.getDrawable().setColorFilter(color, PorterDuff.Mode.SRC_IN);
+        if (iv.getDrawable() != null)
+            iv.getDrawable().setColorFilter(color, PorterDuff.Mode.SRC_IN);
         return this;
     }
 

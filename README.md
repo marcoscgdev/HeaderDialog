@@ -11,7 +11,7 @@ You can see all the library releases [here](https://github.com/marcoscgdev/Heade
 
 ---
 
-##Screenshots
+## Screenshots
 
 <img src="https://raw.githubusercontent.com/marcoscgdev/HeaderDialog/master/screenshots/1.jpg" width="350">
 <img src="https://raw.githubusercontent.com/marcoscgdev/HeaderDialog/master/screenshots/2.jpg" width="350">
@@ -55,7 +55,7 @@ allprojects {
 Now add the dependency to your app build.gradle file:
 
 ```
-compile 'com.github.marcoscgdev:HeaderDialog:1.0.3'
+compile 'com.github.marcoscgdev:HeaderDialog:1.0.4'
 ```
 
 ### Creating the dialog
@@ -91,7 +91,7 @@ new HeaderDialog(this)
 
 ---
 
-##License
+## License
 
 ```
 The MIT License (MIT)

@@ -88,6 +88,20 @@ new HeaderDialog(this)
 
 #### Important note: Do not enable the justified text if you are using html content!
 
+### Accesing inflated custom view
+
+```java
+HeaderDialog headerDialog = new HeaderDialog(this);
+...
+headerDialog.show();
+headerDialog.getInflatedView().findViewById(R.id.checkbox).setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Toast.makeText(MainActivity.this, "Checkbox clicked!", Toast.LENGTH_SHORT).show();
+    }
+});
+```
+
 ---
 >See the *sample project* to clarify any queries you may have.
 

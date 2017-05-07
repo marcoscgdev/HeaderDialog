@@ -88,7 +88,7 @@ new HeaderDialog(this)
 
 #### Important note: Do not enable the justified text if you are using html content!
 
-### Accesing inflated custom view
+### Accessing inflated custom view
 
 ```java
 HeaderDialog headerDialog = new HeaderDialog(this);

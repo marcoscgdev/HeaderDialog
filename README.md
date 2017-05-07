@@ -68,7 +68,7 @@ new HeaderDialog(this)
     .setColor(getResources().getColor(R.color.colorAccent)) // Sets the header background color
     .setElevation(false) // Sets the header elevation, true by default
     .setIcon(getResources().getDrawable(R.drawable.ic_info_outline_black_48dp)) // Sets the dialog icon image
-    .setTitle(getResources().getString(R.string.library_name)) // Sets the dialog title
+    .setTitle(R.string.library_name) // Sets the dialog title
     .setMessage("Lorem ipsum dolor sit amet...") // Sets the dialog message
     .justifyContent(true) // Justifies the message text, false by default
     .setTitleColor(Color.parseColor("#212121")) // Sets the header title text color

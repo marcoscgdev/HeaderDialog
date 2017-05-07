@@ -93,6 +93,8 @@ new HeaderDialog(this)
 ```java
 HeaderDialog headerDialog = new HeaderDialog(this);
 ...
+headerDialog.setView(R.layout.custom);
+...
 headerDialog.show();
 headerDialog.getInflatedView().findViewById(R.id.checkbox).setOnClickListener(new View.OnClickListener() {
     @Override

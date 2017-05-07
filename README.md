@@ -56,7 +56,7 @@ allprojects {
 Now add the dependency to your app build.gradle file:
 
 ```
-compile 'com.github.marcoscgdev:HeaderDialog:1.0.4'
+compile 'com.github.marcoscgdev:HeaderDialog:1.0.5'
 ```
 
 ### Creating the dialog

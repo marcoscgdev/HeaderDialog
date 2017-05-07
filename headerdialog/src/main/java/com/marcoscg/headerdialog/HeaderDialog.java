@@ -7,6 +7,8 @@ package com.marcoscg.headerdialog;
 import android.content.Context;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.LayoutRes;
+import android.support.annotation.StringRes;
 import android.support.v7.app.AlertDialog;
 import android.text.method.LinkMovementMethod;
 import android.util.DisplayMetrics;
@@ -29,22 +31,25 @@ public class HeaderDialog extends AlertDialog.Builder {
     private TextView tv;
     private ImageView iv;
     private LinearLayout ly;
+    private LinearLayout customLayout;
     private View shadow;
     private Context ctx;
     private boolean setElevation = true;
+    private View customInflatedLayout;
 
     public HeaderDialog(Context context) {
         super(context);
         ctx = context;
-        setView(context);
+        init(context);
     }
 
     public HeaderDialog(final Context context, final int theme) {
         super(context, theme);
         ctx = context;
-        setView(context);
+        init(context);
     }
 
+    @Override
     public HeaderDialog setTitle(CharSequence title) {
         tv.setText(title);
         if (Locale.getDefault().getLanguage().equals("ar"))
@@ -59,7 +64,34 @@ public class HeaderDialog extends AlertDialog.Builder {
         return this;
     }
 
+    @Override
+    public HeaderDialog setTitle(@StringRes int titleRes) {
+        String title = ctx.getResources().getString(titleRes);
+        tv.setText(title);
+        if (Locale.getDefault().getLanguage().equals("ar"))
+            tv.setGravity(Gravity.RIGHT);
+        tv.setVisibility(View.VISIBLE);
+        if (ly.getVisibility() == View.GONE)
+            ly.setVisibility(View.VISIBLE);
+        if (shadow.getVisibility() == View.GONE && setElevation)
+            shadow.setVisibility(View.VISIBLE);
+        if (iv.getVisibility() == View.VISIBLE)
+            tv.setPadding(0,dpToPx(8),0,0);
+        return this;
+    }
+
+    @Override
     public HeaderDialog setMessage(CharSequence message) {
+        ctv.setText(message);
+        ctvj.setText(message);
+        if (Locale.getDefault().getLanguage().equals("ar"))
+            ctv.setGravity(Gravity.RIGHT);
+        return this;
+    }
+
+    @Override
+    public HeaderDialog setMessage(int messageRes) {
+        String message = ctx.getResources().getString(messageRes);
         ctv.setText(message);
         ctvj.setText(message);
         if (Locale.getDefault().getLanguage().equals("ar"))
@@ -93,6 +125,7 @@ public class HeaderDialog extends AlertDialog.Builder {
         return this;
     }
 
+    @Override
     public HeaderDialog setIcon (int icon) {
         iv.setImageResource(icon);
         iv.setVisibility(View.VISIBLE);
@@ -103,6 +136,7 @@ public class HeaderDialog extends AlertDialog.Builder {
         return this;
     }
 
+    @Override
     public HeaderDialog setIcon (Drawable icon) {
         iv.setImageDrawable(icon);
         iv.setVisibility(View.VISIBLE);
@@ -140,7 +174,18 @@ public class HeaderDialog extends AlertDialog.Builder {
         return this;
     }
 
-    private void setView(Context context) {
+    @Override
+    public HeaderDialog setView(@LayoutRes int layoutRes) {
+        customInflatedLayout = LayoutInflater.from(customLayout.getContext()).inflate(layoutRes, customLayout, false);
+        customLayout.addView(customInflatedLayout);
+        return this;
+    }
+
+    public View getInflatedView() {
+        return customInflatedLayout;
+    }
+
+    private void init(Context context) {
         View view = LayoutInflater.from(context).inflate(R.layout.header_dialog_content, null);
         ctvj = (ContentTextViewJustified) view.findViewById(R.id.content_justified);
         ctv = (ContentTextView) view.findViewById(R.id.content);
@@ -150,6 +195,7 @@ public class HeaderDialog extends AlertDialog.Builder {
         iv = (ImageView) view.findViewById(R.id.icon);
         ly = (LinearLayout) view.findViewById(R.id.layout);
         shadow = view.findViewById(R.id.top_shadow);
+        customLayout = (LinearLayout) view.findViewById(R.id.contentView);
         setView(view);
     }
 

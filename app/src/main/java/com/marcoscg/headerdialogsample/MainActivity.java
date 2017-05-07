@@ -54,8 +54,17 @@ public class MainActivity extends AppCompatActivity {
             headerDialog.justifyContent(true);
         headerDialog.setTitleColor(Color.parseColor("#212121"));
         headerDialog.setTitleGravity(Gravity.CENTER_HORIZONTAL);
+        headerDialog.setView(R.layout.custom);
         headerDialog.setPositiveButton(android.R.string.ok, null);
         headerDialog.show();
+        
+        headerDialog.getInflatedView().findViewById(R.id.checkbox).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Checkbox clicked!", Toast.LENGTH_SHORT).show();
+            }
+        });
+        
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

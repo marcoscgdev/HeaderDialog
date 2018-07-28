@@ -5,7 +5,7 @@ An android library to display a material-designed dialog with header.
 
 ## Releases:
 
-#### Current release: 1.0.5.
+#### Current release: 1.0.6.
 
 You can see all the library releases [here](https://github.com/marcoscgdev/HeaderDialog/releases).
 
@@ -56,7 +56,7 @@ allprojects {
 Now add the dependency to your app build.gradle file:
 
 ```
-compile 'com.github.marcoscgdev:HeaderDialog:1.0.5'
+compile 'com.github.marcoscgdev:HeaderDialog:1.0.6'
 ```
 
 ### Creating the dialog

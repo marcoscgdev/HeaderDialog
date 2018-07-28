@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 import com.marcoscg.headerdialog.HeaderDialog;
 
@@ -22,10 +23,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if (Build.VERSION.SDK_INT >= 21) {
+
+        if (Build.VERSION.SDK_INT >= 21 && getSupportActionBar()!=null)
             getSupportActionBar().setElevation(0);
-        }
     }
+
     public void showHeaderDialog(View v) {
         /*
         *
@@ -66,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         });
         
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -81,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
     public void showAboutDialog() {
         String msg = getResources().getString(R.string.about_text);
         new HeaderDialog(this)
